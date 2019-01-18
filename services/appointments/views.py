@@ -1,13 +1,11 @@
 from flask.views import MethodView
 
-__all__ = ['stuffview']
-
-class StuffView(MethodView):
+class AppointmentView(MethodView):
 
 	def get(self):
-		return '{"result" : "get goes here"}'
+		return '{"result" : "appointments goes here"}'
 
 	def post(self):
 		return '{"result" : "post"}'
 
-stuffview = StuffView.as_view('stuff_views')
+appointment_views = AppointmentView.as_view('appointment_views')
